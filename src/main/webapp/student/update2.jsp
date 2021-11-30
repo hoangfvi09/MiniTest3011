@@ -14,11 +14,12 @@
 <body>
 <form method="post">
     <p>Student id: ${student.getId()} </p> <br>
-    <input type="text" value="${student.getName()}" name="name"> <br>
+    <input type="text" value="${student.getName()}" name="name1"> <br>
     <input type="text" value="${student.getMaths()}" name="maths"> <br>
     <input type="text" value="${student.getPhysics()}" name="physics"> <br>
     <input type="text" value="${student.getChemistry()}" name="chemistry">
-    <button>Submit</button>
+    <button onclick="return confirm('Are you sure to update student id ${student.getId()} with name '+ name1.value+': '+ 'maths '+maths.value+', physics '+physics.value+', chemistry '+chemistry.value)">
+        Submit</button>
 </form>
 </body>
 </html>
