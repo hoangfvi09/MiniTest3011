@@ -26,9 +26,24 @@ public class StudentServlet extends HttpServlet {
             case "update":
                 showEditForm(request, response);
                 break;
+            case "update2":
+                showEditForm2(request, response);
+                break;
             default:
                 showStudentList(request, response);
                 break;
+        }
+    }
+
+    private void showEditForm2(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("student/update2.jsp");
+        int id = Integer.parseInt(request.getParameter("id"));
+        Student student = studentService.findById(id);
+        request.setAttribute("student",student);
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -71,7 +86,8 @@ public class StudentServlet extends HttpServlet {
             action = "";
         }
         switch (action) {
-            case "update":
+            case "update" :
+            case "update2":
                 updateStudent(request, response);
                 break;
             default:

@@ -15,7 +15,7 @@
 <c:if test='${message != null}'>
     ${message}
     <br>
-    <a href="/student">View product list</a>
+    <a href="/student">View student list</a>
 </c:if>
 </body>
 </html>

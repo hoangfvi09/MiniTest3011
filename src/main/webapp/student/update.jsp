@@ -14,16 +14,8 @@
 <body>
 <c:if test='${message !=null}'>
     ${message}<br>
-    <a href="/student">View product list</a>
+    <a href="/student">View student list</a>
 </c:if>
 
-<form method="post">
-    student id: <input type="text" name="id">
-    student new name: <input type="text" name="name">
-    student new maths grade: <input type="text" name="maths">
-    student new physics grade: <input type="text" name="physics">
-    student new chemistry grade: <input type="text" name="chemistry">
-    <button>Submit</button>
-</form>
 </body>
 </html>

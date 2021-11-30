@@ -17,10 +17,10 @@
     <p>
             ${student.getId()},    ${student.getName()},    ${student.getMaths()} ,   ${student.getPhysics()},  ${student.getChemistry()}
                 <a href="student?action=remove&id=${student.getId()}"
-           onclick="return confirm('Are you sure to delete student ${student.getName()}?')">Delete</a><br>
+           onclick="return confirm('Are you sure to delete student ${student.getName()}?')">Delete</a>
+                <a href="student?action=update2&id=${student.getId()}">Edit</a><br>
     </p>
 
 </c:forEach>
-<a href="student?action=update">Update a student</a>
 </body>
 </html>
